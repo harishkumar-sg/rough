@@ -17,8 +17,8 @@ export class Address extends BaseEntity {
   city: string;
 
 
-  // @OneToOne(()=>Employee,(emp)=>emp.address )
-  // public employee : Employee
+  @OneToOne(()=>Employee,(emp)=>emp.address )
+  public employee : Employee
   
 
   

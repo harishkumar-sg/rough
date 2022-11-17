@@ -35,9 +35,9 @@ export class Employee extends BaseEntity {
   salary:number   ;
 
 
-  // @OneToOne(()=>Address,(add)=>add.employee)
-  // @JoinColumn({name:'addId',referencedColumnName:'id'})
-  // public address:Address
+  @OneToOne(()=>Address,(add)=>add.employee)
+  @JoinColumn({name:'addId',referencedColumnName:'id'})
+  public address:Address
 
   // @OneToOne(()=> Job_type,(job)=>{job.employee})
   // @JoinColumn({name:'desgId',referencedColumnName:'id'})
